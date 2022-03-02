@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #232323;
+}
+.container {
+  width: 480px;
+}
+.header {
+  background: hsla(70, 57%, 53%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(70, 57%, 53%, 1) 0%,
+    hsla(140, 55%, 46%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(70, 57%, 53%, 1) 0%,
+    hsla(140, 55%, 46%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(70, 57%, 53%, 1) 0%,
+    hsla(140, 55%, 46%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#b5cc43", endColorstr="#35b55f", GradientType=1 );
+  color: #232323;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header h1 {
+  border: 5px solid #232323;
+  padding: 10px 20px;
+  border-radius: 40px;
+  margin-top: 10%;
+}
+
+.header img {
+  width: 20%;
+}
+#amountAvailable {
+  padding: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+#amountAvailable::first-letter {
+  font-weight: 400;
+}
+#amountAvailable span {
+  font-weight: 400;
+}
+#amountAText {
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+.status {
+  display: flex;
+  align-items: center;
+}
+.tile {
+  flex-direction: column;
+  border: 5px;
+  margin: 20px;
+  background-color: #232323;
+  color: rgb(245, 245, 245);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px #0000006e;
+}
+.tile img {
+  margin-left: 30px;
+  margin-top: 10px;
+  /* transform: rotate(360deg); */
+}
+.tile .detail {
+  margin-left: 30px;
+}
+.tile .detail h3 {
+  color: rgba(255, 255, 255, 0.966);
+  font-size: 0.8rem;
+  margin: 10px 0 10px 0;
+}
+.tile .detail h3 span {
+  opacity: 1;
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: rgba(240, 69, 69, 0.801);
+  padding: 2px;
+  border-radius: 5px;
+  color: black;
+}
+.tile .detail .ammount {
+  padding-bottom: 20px;
+}
+.addvalue {
+  display: flex;
+  width: 100%;
+}
+.addvalue .value {
+  width: 100px;
+
+  text-align: center;
+}
+.addvalue .value .selectText {
+  font-weight: 600;
+  font-size: 0.7rem;
+  margin: 8px 5px 10px 0;
+  transition: all 0.4s ease-in-out;
+}
+div[status="income"] {
+  color: hsl(89, 50%, 53%);
+}
+div[status="expense"] {
+  color: rgb(243, 89, 89);
+}
+.switch {
+  width: 60px;
+  height: 30px;
+  display: inline-block;
+  background-color: rgb(138, 196, 76);
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.circle {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transform: translateX(0%);
+  border-radius: 100%;
+  background-color: #232323;
+  transition: transform 0.1s linear;
+}
+.check {
+  display: none !important;
+}
+.check:checked + label .circle {
+  transform: translateX(110%);
+}
+.check:checked + label {
+  background-color: #ff5049;
+}
+#addName,
+#addValue {
+  margin: 20px 5px 10px 0;
+  height: 40px;
+  padding: 0 0 0 10px;
+  outline: none;
+  border: 1px solid rgba(209, 206, 206, 0.63);
+  border-radius: 5px;
+}
+#addName {
+  width: 250px;
+}
+#addName:focus,
+#addValue:focus {
+  border: 1px solid rgb(138, 196, 76);
+}
+#addValue {
+  width: 80px;
+}
+.red-focus:focus {
+  border: 1px solid #ff5049 !important;
+  color: #ff5049 !important;
+}
+input.red-focus:focus {
+  color: black !important;
+}
+input[type="submit"].red-focus {
+  border: 1px solid #ff5049 !important;
+  color: #ff5049 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  cursor: pointer;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: pointer;
+}
+#submit {
+  margin: 20px 5px 10px 0;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  outline: none;
+  border: 1px solid rgb(138, 196, 76);
+  border-radius: 100%;
+  color: rgb(138, 196, 76);
+  background-color: #232323;
+  cursor: pointer;
+  transition: border 0.2s linear, color 0.2s linear;
+}
+#submit:active,
+.invidual_tile .close:active {
+  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -o-transform: translateY(2px);
+}
+.invidual_tile {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 50px;
+  margin: 15px 0;
+  box-shadow: 0 0 8px 2px hsla(0, 0%, 1%, 0.7);
+  justify-content: flex-end;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+}
+.invidual_tile button {
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.invidual_tile .close {
+  margin-right: 20px;
+}
+.invidual_tile .ammount {
+  margin-right: 20px;
+}
+.invidual_tile .name {
+  left: 40px;
+  position: absolute;
+}
+.expense-tile {
+  background: hsla(0, 100%, 36%, 1);
+
+  background: linear-gradient(
+    225deg,
+    hsla(0, 100%, 36%, 0.9) 0%,
+    hsla(0, 86%, 39%, 0.5) 100%
+  );
+
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(0, 100%, 36%, 0.9) 0%,
+    hsla(0, 86%, 39%, 0.5) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(0, 100%, 36%, 0.9) 0%,
+    hsla(0, 86%, 39%, 0.5) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B90000", endColorstr="#B80E0E", GradientType=1 );
+}
+.income-tile {
+  background: hsla(70, 57%, 53%, 1);
+
+  background: linear-gradient(
+    140deg,
+    hsla(70, 57%, 53%, 1) 0%,
+    hsla(140, 55%, 46%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    140deg,
+    hsla(70, 57%, 53%, 1) 0%,
+    hsla(140, 55%, 46%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    140deg,
+    hsla(70, 57%, 53%, 1) 0%,
+    hsla(140, 55%, 46%, 1) 100%
+  );
+}
+@media only screen and (max-width: 450px) {
+  .container {
+    width: 300px;
+  }
+  .switch {
+    width: 40px;
+    height: 20px;
+  }
+  .circle {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 1px;
+  }
+  .check:checked + label .circle {
+    transform: translateX(90%);
+  }
+  #submit {
+    margin: 30px 2px 0px 0;
+    width: 20px;
+    height: 20px;
+    font-size: 0.5rem;
+    outline: none;
+    border: 1px solid rgb(138, 196, 76);
+    border-radius: 100%;
+    color: rgb(138, 196, 76);
+    background-color: white;
+    cursor: pointer;
+    transition: border 0.2s linear, color 0.2s linear;
+  }
+  #addName {
+    width: 120px;
+  }
+
+  #addValue {
+    width: 70px;
+  }
+}
+.pd-2 {
+  background-color: #f5f5f541;
+  border-radius: 5px;
+  padding: 5px;
+  color: #232323;
+  margin-right: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

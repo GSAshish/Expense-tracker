@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget Tracker</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Budget Tracker</h1>
+            <div id="amountAvailable" class="income">
+                <span id="text">----</span>
+                <!--<span>&#8377;</span>-->
+            </div>
+            <div id="amountAText">Budget available</div>
+            <div class="status">
+                <div class="income tile">
+                    <img src="IMAGES/income.png" alt="Income">
+                    <div class="detail">
+                        <h3>Income</h3>
+                        <div class="ammount" id="totalIncome">----</div>
+                    </div>
+                </div>
+                <div class="expense tile">
+                    <img src="IMAGES/expense.png" alt="expense">
+                    <div class="detail">
+                        <h3>Expense <span id="expencePercentage">---</span></h3>
+                        <div class="ammount" id="totalExpense">----</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //////////Adding expense section////////// -->
+        <form class="form">
+            <div class="addvalue">
+                <div class="value">
+                    <div class="selectText" status="income" id="toggleStatus">income</div>
+                    <input type="checkbox" class="check" id="status">
+                    <label for="status" class="switch">
+                        <span class="circle">
+                        </span>
+                    </label>
+                </div>
+                <input type="text" id="addName" placeholder="add description">
+                <input type="number" id="addValue" placeholder="value" min="1">
+                <input type="submit" id="submit" value="&#10003;">
+            </div>
+        </form>
+        <div class="details">
+            <!-- <div class="expense-tile invidual_tile" id="exp">
+                <div class="name">fail</div>
+                <div class="ammount">-34</div>
+                <button class="close" id="close">X</button>
+            </div>
+            <div class="income-tile invidual_tile" id="inc">
+                <div class="name">Paas</div>
+                <div class="ammount">+34</div>
+                <button class="close" id="close">X</button>
+            </div> -->
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
